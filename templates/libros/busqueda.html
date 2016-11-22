@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <select>
+        <option>Elige un Autor</option>
+        {% for autor in autores %}
+            <option value="{{autor.id}}">{{autor.nombre}}</option>
+        {% endfor %}
+    </select>
+{% endblock %}

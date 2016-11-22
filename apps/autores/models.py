@@ -6,5 +6,5 @@ class Autor(models.Model):
     descripcion = models.TextField(max_length=200)
     foto = models.ImageField(upload_to='foto_autor')
 
-def __unicode__(self):
-    return self.nombre
+    def __unicode__(self):
+        return self.nombre
