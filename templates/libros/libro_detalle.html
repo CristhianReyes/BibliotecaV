@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+   {% block content %}
+       <div class="post">
+           {% if libros.nombre %}
+           {% endif %}
+           <a class="btn btn-default" href="{% url 'libro_eliminar' pk=libros.pk %}"><span class="glyphicon glyphicon-remove"> Eliminar</span></a>
+           <a class="btn btn-default" href="{% url 'libro_editar' pk=libros.pk %}"><span class="glyphicon glyphicon-pencil"> Editar</span></a>
+           <h4>Libro: {{ libros.nombre }}</h4>
+           <h4>Autor: {{ libros.autor }}</h4>
+           <img src="{{libros.portadas}}" alt="{{ libros.libros }}"/>
+           <h4>Resumen: {{ libros.resumen|linebreaksbr }}</h4>
+       </div>
+   {% endblock %}

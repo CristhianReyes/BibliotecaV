@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a class="btn btn-default" href="{% url 'libro_nuevo' %}"><span > Nuevo Libro</span></a>
+
+    {% for post in libros %}
+        <div class="post">
+            <div class="date">
+                {{ post.autor }}
+            </div>
+            <h1><a href="{% url 'libro_detalle' pk=post.pk %}">{{ post.nombre }}</a></h1>
+        </div>
+    {% endfor %}
+{% endblock content %}
